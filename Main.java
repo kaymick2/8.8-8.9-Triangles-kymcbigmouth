@@ -30,13 +30,14 @@ class Main {
       input.next();
     }
     sideC = input.nextDouble();
+    //output
     System.out.println("You have entered "+sideA+", "+sideB+", "+sideC+" as sides A, B, and C respectively. ");
     if(userTriangle.test(sideA, sideB, sideC)){
       System.out.println("Your values form a valid triangle.");
+      System.out.println("Triangle type: "+userTriangle.type(sideA, sideB, sideC));
     }else{
       System.out.println("Your values do not form a valid triangle.");
     }
-    // for output, call test method. output result with if statements accordingly.
-    // figure out how to only output type if test method returns true
+   
   }
 }

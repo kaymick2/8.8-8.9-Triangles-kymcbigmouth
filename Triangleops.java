@@ -9,26 +9,35 @@ public class Triangleops {
     this.sideC = sideC;
   }
 
-  public boolean test (double sideA, double sideB, double sideC){
-    boolean testResult=false;
-    if(sideA<sideC&&sideB<sideC){
-      if((sideA+sideB)>sideC){
-        testResult=true;
+  public boolean test(double sideA, double sideB, double sideC) {
+    boolean testResult = false;
+    if (sideA < sideC && sideB < sideC) {
+      if ((sideA + sideB) > sideC) {
+        testResult = true;
       }
-    }else if (sideB<sideA&&sideC<sideA){
-      if((sideB+sideC)>sideA){
-        testResult=true;
+    } else if (sideB < sideA && sideC < sideA) {
+      if ((sideB + sideC) > sideA) {
+        testResult = true;
       }
-    }else if (sideA<sideB&&sideC<sideB){
-      if((sideA+sideC)>sideB){
-        testResult=true;
+    } else if (sideA < sideB && sideC < sideB) {
+      if ((sideA + sideC) > sideB) {
+        testResult = true;
       }
-    }else{
-      testResult=false;
+    } else {
+      testResult = false;
     }
-return testResult;
+    return testResult;
   }
-  // create output method, possibly void
-  // output should contain if statement to test testResult value
-  // if true, pass back to main
+//triangle type
+  public String type(double sideA, double sideB, double sideC) {
+    String triangleType = "n/a";
+    if ((Math.pow(sideA, 2)) + (Math.pow(sideB, 2)) == (Math.pow(sideC, 2))) {
+      triangleType = "Right";
+    } else if ((Math.pow(sideA, 2)) + (Math.pow(sideB, 2)) > (Math.pow(sideC, 2))) {
+      triangleType = "Acute";
+    } else if ((Math.pow(sideA, 2)) + (Math.pow(sideB, 2)) < (Math.pow(sideC, 2))) {
+      triangleType = "Obtuse";
+    }
+    return triangleType;
+  }
 }
