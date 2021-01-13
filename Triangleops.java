@@ -7,8 +7,8 @@ public class Triangleops{
     this.sideB=sideB;
     this.sideC=sideC;
   }
-  public test (double sideA, double sideB, double sideC){
-    
-  }
+  /*public test (double sideA, double sideB, double sideC){
+
+  }**/
   
   }
